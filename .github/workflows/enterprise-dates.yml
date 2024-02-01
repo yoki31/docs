@@ -93,7 +93,7 @@ jobs:
           number: ${{ steps.create-pull-request.outputs.pull-request-number }}
 
       - name: Send Slack notification if workflow fails
-        uses: someimportantcompany/github-actions-slack-message@f8d28715e7b8a4717047d23f48c39827cacad340
+        uses: someimportantcompany/github-actions-slack-message@a975b440de2bcef178d451cc70d4c1161b5a30cd
         if: ${{ failure() && env.FREEZE != 'true' }}
         with:
           channel: ${{ secrets.DOCS_ALERTS_SLACK_CHANNEL_ID }}
